@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: linear-gradient(#3b82f6, #4a7dff);
+}
+body * {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container principal */
+#container {
+  padding: 1.8rem;
+  border-radius: 2rem;
+
+  background-color: #f0f8ff;
+  box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Search form */
+#search {
+  padding: .4rem 1.2rem;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  border: .1rem solid #bdbdbd;
+}
+#search input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+#search input:focus-visible {
+  outline: none;
+}
+#search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Weather */
+#weather {
+  display: none;
+  margin-top: 2rem;
+}
+#weather.show {
+  display: block;
+}
+#weather #title {
+  margin-bottom: .5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #372f3f;
+}
+/* Weather -> Temp */
+#temp {
+  padding: 2rem;
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+
+  color: #fff;
+  background: linear-gradient(90deg, #5a7cdc, #606dde);
+}
+#temp_img {
+  filter: drop-shadow(.2rem .2rem .2rem rgba(0, 0, 0, 0.2));
+}
+#temp_value {
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+#temp_description {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+/* Weather -> Other infos */
+#other_infos {
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+#other_infos .info {
+  padding: .4rem 1rem;
+  border-radius: .8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+
+  background-color: #fff;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.2);
+}
+#other_infos .info h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#other_infos .info i {
+  width: 20%;
+
+  text-align: center;
+  font-size: 2rem;
+}
+#temp_max_icon {
+  color: #7f1d1d;
+}
+#temp_min_icon {
+  color: #0284c7;
+}
+#humidity_icon {
+  color: #0ea5e9;
+}
+#wind_icon {
+  color: #7c3aed;
+}
+
+/* Alert */
+#alert {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin-top: .8rem;
+}
+#alert img {
+  width: 100%;
+  max-width: 20rem;
+  margin-top: 2rem;
+}
